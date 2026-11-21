@@ -1,0 +1,21 @@
+# Terraform working files (provider plugins, large and machine-specific)
+.terraform/
+
+# Terraform state can contain secrets (e.g. access key secrets) in plain text
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Variable files often hold account-specific or secret values
+*.tfvars
+*.tfvars.json
+
+# Prowler scan reports contain account IDs and every finding
+output/
+**/output/
+
+# Local credentials and environment files
+.env
+*.pem
+.aws/
